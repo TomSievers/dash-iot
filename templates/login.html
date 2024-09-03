@@ -1,0 +1,9 @@
+{{define "head"}}<title>Login - Dash-IoT</title>{{end}}
+
+{{define "content"}}
+<form hx-post="/login" hx-ext="json-enc">
+    <input type="text" name="name" required>
+    <input type="password" name="password" required>
+    <button type="submit">Login</button>
+</form>
+{{end}}

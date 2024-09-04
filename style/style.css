@@ -1,0 +1,22 @@
+main {
+    width: 80%;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.col {
+    flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        width: 100%;
+    }
+}

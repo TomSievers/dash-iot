@@ -34,6 +34,10 @@ func main() {
 		tmpl["login"].Execute(w, nil)
 	}))
 
+	fileHandler := http.FileServer(http.Dir("./style"))
+
+	mux.Handle("/style/", http.StripPrefix("/style", fileHandler))
+
 	err = http.ListenAndServe("127.0.0.1:8080", mux)
 
 	if err != nil {
